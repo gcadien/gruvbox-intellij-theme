@@ -9,7 +9,7 @@ plugins {
     // Kotlin support
     id("org.jetbrains.kotlin.jvm") version "1.5.10"
     // gradle-intellij-plugin - read more: https://github.com/JetBrains/gradle-intellij-plugin
-    id("org.jetbrains.intellij") version "1.1-SNAPSHOT"
+    id("org.jetbrains.intellij") version "1.10.0"
     // gradle-changelog-plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
     id("org.jetbrains.changelog") version "1.1.2"
 }
@@ -47,8 +47,8 @@ changelog {
 tasks {
     // Set the compatibility versions to 1.8
     withType<JavaCompile> {
-        sourceCompatibility = "1.8"
-        targetCompatibility = "1.8"
+        sourceCompatibility =  "1.17"
+        targetCompatibility = "1.17"
     }
     withType<KotlinCompile> {
         kotlinOptions.jvmTarget = "1.8"
